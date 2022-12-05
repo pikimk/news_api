@@ -1,0 +1,13 @@
+type Query {
+    news : [NewsObject]
+    getById(id : ID!): NewsObject
+    getByTitle(contains : String!): [NewsObject]
+}
+
+type NewsObject {
+    id : ID!
+    title : String!
+    description : String!
+    url : String
+    date : String
+}
